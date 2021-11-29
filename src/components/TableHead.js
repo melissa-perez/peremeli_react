@@ -9,11 +9,13 @@ function TableHead() {
   return (
     <>
       <thead>
-        <td>Name</td>
-        <td>Reps</td>
-        <td>Weight</td>
-        <td>Unit</td>
-        <td>Date</td>
+        <tr>
+          <th>Name</th>
+          <th>Reps</th>
+          <th>Weight</th>
+          <th>Unit</th>
+          <th>Date</th>
+        </tr>
       </thead>
     </>
   );
