@@ -1,5 +1,5 @@
 import React from "react";
-import { MdAdd, MdRemove } from "react-icons/md";
+import { MdEdit, MdDeleteForever } from "react-icons/md";
 /*  
     Defines a single tr for a table
     that includes params for exercises,
@@ -7,7 +7,7 @@ import { MdAdd, MdRemove } from "react-icons/md";
     remove the row from the database, when Edit is
     clicked, launch the EditPage.
 */
-function Row({ exercise }) {
+function Row({ exercise, onDelete }) {
   return (
     <>
       <tr>
@@ -16,8 +16,14 @@ function Row({ exercise }) {
         <td>{exercise.weight}</td>
         <td>{exercise.unit}</td>
         <td>{exercise.date}</td>
-        <td>Edit</td>
-        <td>Delete</td>
+        <td>
+          <MdEdit></MdEdit>
+        </td>
+        <td>
+          <MdDeleteForever
+            onClick={() => onDelete(exercise._id)}
+          ></MdDeleteForever>
+        </td>
       </tr>
     </>
   );

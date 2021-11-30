@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CreatePage from "./pages/CreatePage";
 import EditPage from "./pages/EditPage";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <EditPage />
           </Route>
         </div>
+        <Navigation></Navigation>
       </Router>
     </div>
   );
