@@ -15,8 +15,9 @@ function Row({ exercise }) {
         <td>{exercise.reps}</td>
         <td>{exercise.weight}</td>
         <td>{exercise.unit}</td>
-        <td></td>
-        <td></td>
+        <td>{exercise.date}</td>
+        <td>Edit</td>
+        <td>Delete</td>
       </tr>
     </>
   );
