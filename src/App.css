@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/*CSS Rules per Assignment guidelines/custom made*/
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #EEE9EA;
+  color: #333;
+  margin: 5%;
+  padding: 2 em;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+}
+
+h1 {
+  color:#4484CE;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2, p {
+  color:#595a61;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+caption {
+  caption-side: bottom;
+}
+
+table {
+  color: #5A6794;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td, tr, caption {
+  border: 1px solid #bebdbd;
+  padding: 8px;
+  letter-spacing: 1px;
+}
+
+td, fieldset, legend, label, input, button {
+  color: #5A6794;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+legend {
+  background-color:ghostwhite;
+}
+
+th {
+  background-color: #00887a;
+  letter-spacing: 2px;
+  color: rgb(241, 239, 239)
+}
+
+tr {
+  background-color: gainsboro;
+}
+
+input {
+  margin-left: 1em;
+  font-size: 1.5rem;
+  width: 100px;
+}
+
+button {
+  font-size: 1rem;
+  background-color:dodgerblue;
+  border: none;
   color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 15px;
+  font-weight: 500;
+  border-radius: 10%;
 }
 
-.App-link {
-  color: #61dafb;
+tr:nth-child(even) {background-color: rgba(245, 244, 244, 0.404);}
+
+tr:hover {background-color: #FAe39c;}
+
+nav {
+  background-color: #9cc6f7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.select-quantity-div {
+  margin: 10px;
+  user-select: none;
+}
+
+.select-quantity-value {
+  background-color: azure;
+  padding:  5px;
+  border-radius:  20px;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link{
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color:rgb(241, 239, 239);
+  text-shadow: #333 1px 0 9px;
+}
+
+.App {
+  text-align: center;
 }

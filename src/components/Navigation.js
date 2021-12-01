@@ -11,7 +11,7 @@ function Navigation() {
           </Link>
         </li>
         <li>
-          <Link to="/CreatePage" className="nav-link">
+          <Link to="/add-exercise" className="nav-link">
             Add New Exercise
           </Link>
         </li>

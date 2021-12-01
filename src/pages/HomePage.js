@@ -34,7 +34,6 @@ function HomePage() {
     <>
       <h2>Exercise Tracker</h2>
       <Table exercises={exercises} onDelete={onDelete}></Table>
-      <Link to="/add-exercise">Add an exercise</Link>
     </>
   );
 }
