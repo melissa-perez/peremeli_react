@@ -57,7 +57,7 @@ export const CreatePage = () => {
         onChange={(e) => setUnit(e.target.value)}
       />
       <input
-        type="date"
+        type="text"
         placeholder="Select date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
