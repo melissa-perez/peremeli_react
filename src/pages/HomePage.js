@@ -1,11 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
 import Table from "../components/Table";
 
-function HomePage() {
+function HomePage({ setExerciseToEdit }) {
   const [exercises, setExercises] = useState([]);
+
+  const history = useHistory();
 
   const onDelete = async (_id) => {
     const response = await fetch(`/exercises/${_id}`, { method: "DELETE" });
@@ -16,6 +17,11 @@ function HomePage() {
         `Failed to delete movie with _id=${_id}, status code = ${response.status}`
       );
     }
+  };
+
+  const onEdit = async (exerciseToEdit) => {
+    setExerciseToEdit(exerciseToEdit);
+    history.push("/edit-exercise");
   };
 
   //connection to our REST API dbs
@@ -33,7 +39,7 @@ function HomePage() {
   return (
     <>
       <h2>Exercise Tracker</h2>
-      <Table exercises={exercises} onDelete={onDelete}></Table>
+      <Table exercises={exercises} onDelete={onDelete} onEdit={onEdit}></Table>
     </>
   );
 }
