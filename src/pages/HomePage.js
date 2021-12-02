@@ -31,7 +31,7 @@ function HomePage({ setExerciseToEdit }) {
     setExercises(data);
   };
 
-  //requires a non async function as first parameter
+  //requires a non anon function as first parameter
   useEffect(() => {
     loadExercises();
   }, []);

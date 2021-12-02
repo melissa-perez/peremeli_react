@@ -51,7 +51,7 @@ export const EditPage = ({ exerciseToEdit }) => {
         onChange={(e) => setUnit(e.target.value)}
       />
       <input
-        type="date"
+        type="text"
         value={date}
         onChange={(e) => setDate(e.target.value)}
       />
