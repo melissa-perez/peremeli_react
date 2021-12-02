@@ -62,7 +62,6 @@ tr {
 input {
   margin-left: 1em;
   font-size: 1.5rem;
-  width: 100px;
 }
 
 button {
@@ -70,10 +69,10 @@ button {
   background-color:dodgerblue;
   border: none;
   color: white;
-  padding: 15px 15px;
+  padding: 10px;
   text-align: center;
   text-decoration: none;
-  margin-top: 15px;
+  margin: 15px;
   font-weight: 500;
   border-radius: 10%;
 }
