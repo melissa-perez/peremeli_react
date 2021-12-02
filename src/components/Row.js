@@ -7,7 +7,7 @@ import { MdEdit, MdDeleteForever } from "react-icons/md";
     remove the row from the database, when Edit is
     clicked, launch the EditPage.
 */
-function Row({ exercise, onDelete }) {
+function Row({ exercise, onDelete, onEdit }) {
   return (
     <>
       <tr>
@@ -17,7 +17,7 @@ function Row({ exercise, onDelete }) {
         <td>{exercise.unit}</td>
         <td>{exercise.date}</td>
         <td>
-          <MdEdit></MdEdit>
+          <MdEdit onClick={() => onEdit(exercise)}></MdEdit>
         </td>
         <td>
           <MdDeleteForever
