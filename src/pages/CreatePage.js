@@ -3,16 +3,17 @@ import { useHistory } from "react-router-dom";
 
 export const CreatePage = () => {
   const [name, setName] = useState("");
-  const [reps, setReps] = useState("");
-  const [weight, setWeight] = useState("");
+  const [reps, setReps] = useState(0);
+  const [weight, setWeight] = useState(0);
   const [unit, setUnit] = useState("");
   const [date, setDate] = useState("");
+
   const history = useHistory();
 
   const addExercise = async () => {
     const response = await fetch("/exercises", {
       method: "POST",
-      body: JSON.stringify(name, reps, weight, unit, date),
+      body: JSON.stringify({ name, reps, weight, unit, date }),
       headers: {
         "Content-Type": "application/json",
       },
@@ -77,9 +78,9 @@ export const CreatePage = () => {
               />
             </p>
           </fieldset>
-          <button onClick={addExercise}>Add</button>
         </form>
       </div>
+      <button onClick={addExercise}>Add</button>
     </div>
   );
 };
