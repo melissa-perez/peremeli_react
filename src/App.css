@@ -13,6 +13,11 @@ body{
   font-size: calc(10px + 2vmin);
 }
 
+.exerciseform form{display: table;}
+.exerciseform p     { display: table-row;  }
+.exerciseform label { display: table-cell; }
+.exerciseform input { display: table-cell; }
+
 h1 {
   color:#4484CE;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -43,10 +48,6 @@ th, td, tr, caption {
 td, fieldset, legend, label, input, button {
   color: #5A6794;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-legend {
-  background-color:ghostwhite;
 }
 
 th {

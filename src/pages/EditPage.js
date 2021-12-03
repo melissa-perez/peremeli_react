@@ -28,33 +28,57 @@ export const EditPage = ({ exerciseToEdit }) => {
   return (
     <div>
       <h2>Edit Exercise</h2>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        type="number"
-        value={reps}
-        min="0"
-        onChange={(e) => setReps(e.target.value)}
-      />
-      <input
-        type="number"
-        min="0"
-        value={weight}
-        onChange={(e) => setWeight(e.target.value)}
-      />
-      <input
-        type="text"
-        value={unit}
-        onChange={(e) => setUnit(e.target.value)}
-      />
-      <input
-        type="text"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
-      />
+      <div>
+        <form className="exerciseform">
+          <fieldset>
+            <legend>Exercise Information</legend>
+            <p>
+              <label>Enter exercise name: </label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </p>
+            <p>
+              <label>Enter reps: </label>
+              <input
+                type="Number"
+                value={reps}
+                min="0"
+                onChange={(e) => setReps(e.target.value)}
+              />
+            </p>
+            <p>
+              <label>Enter weights used: </label>
+              <input
+                type="Number"
+                value={weight}
+                min="0"
+                onChange={(e) => setWeight(e.target.value)}
+              />
+            </p>
+            <p>
+              <label>Enter unit type: </label>
+              <input
+                type="text"
+                placeholder="lbs or kg"
+                value={unit}
+                onChange={(e) => setUnit(e.target.value)}
+              />
+            </p>
+            <p>
+              <label>Enter date: </label>
+              <input
+                type="text"
+                placeholder="MM-DD-YY"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+              />
+            </p>
+          </fieldset>
+        </form>
+      </div>
       <button onClick={editExercise}>Save</button>
     </div>
   );

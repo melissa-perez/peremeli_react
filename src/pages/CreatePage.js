@@ -24,7 +24,10 @@ export const CreatePage = () => {
   return (
     <div>
       <h2>Add Exercise</h2>
-      <ExerciseForm addExercise={addExercise}> </ExerciseForm>
+      <ExerciseForm
+        exerciseFunction={addExercise}
+        buttonText={"Add"}
+      ></ExerciseForm>
     </div>
   );
 };
