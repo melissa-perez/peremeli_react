@@ -11,14 +11,14 @@ export const EditPage = ({ exerciseToEdit }) => {
   const history = useHistory();
 
   const editExercise = async () => {
-    const response = await fetch(`/exercises/${exerciseToEdit}`, {
+    const response = await fetch(`/exercises/${exerciseToEdit._id}`, {
       method: "PUT",
       body: JSON.stringify({ name, reps, weight, unit, date }),
       headers: {
         "Content-Type": "application/json",
       },
     });
-    if (response.status === 201) {
+    if (response.status === 200) {
       alert("Successfully edited the exercise!");
     } else {
       alert(`Failed to edit exercise, status code = ${response.status}`);
