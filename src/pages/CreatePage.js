@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import ExerciseForm from "../components/ExerciseForm";
 
 export const CreatePage = () => {
+  const [name, setName] = useState("");
+  const [reps, setReps] = useState(0);
+  const [weight, setWeight] = useState(0);
+  const [unit, setUnit] = useState("");
+  const [date, setDate] = useState("");
   const history = useHistory();
 
-  const addExercise = async (newExercise) => {
+  const addExercise = async () => {
     const response = await fetch("/exercises", {
       method: "POST",
-      body: JSON.stringify(newExercise),
+      body: JSON.stringify(name, reps, weight, unit, date),
       headers: {
         "Content-Type": "application/json",
       },
@@ -24,10 +28,58 @@ export const CreatePage = () => {
   return (
     <div>
       <h2>Add Exercise</h2>
-      <ExerciseForm
-        exerciseFunction={addExercise}
-        buttonText={"Add"}
-      ></ExerciseForm>
+      <div>
+        <form className="exerciseform">
+          <fieldset>
+            <legend>Exercise Information</legend>
+            <p>
+              <label>Enter exercise name: </label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </p>
+            <p>
+              <label>Enter reps: </label>
+              <input
+                type="Number"
+                value={reps}
+                min="0"
+                onChange={(e) => setReps(e.target.value)}
+              />
+            </p>
+            <p>
+              <label>Enter weights used: </label>
+              <input
+                type="Number"
+                value={weight}
+                min="0"
+                onChange={(e) => setWeight(e.target.value)}
+              />
+            </p>
+            <p>
+              <label>Enter unit type: </label>
+              <input
+                type="text"
+                placeholder="lbs or kg"
+                value={unit}
+                onChange={(e) => setUnit(e.target.value)}
+              />
+            </p>
+            <p>
+              <label>Enter date: </label>
+              <input
+                type="text"
+                placeholder="MM-DD-YY"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+              />
+            </p>
+          </fieldset>
+          <button onClick={addExercise}>Add</button>
+        </form>
+      </div>
     </div>
   );
 };
